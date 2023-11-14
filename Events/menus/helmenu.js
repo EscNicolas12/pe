@@ -1,7 +1,7 @@
 const { EmbedBuilder, ActionRowBuilder, StringSelectMenuBuilder, ButtonStyle, ButtonBuilder } = require('discord.js');
 
 module.exports = {
-    name: 'menu',
+    name: 'interactionCreate',
     async execute(interaction) {
         if (interaction.isAnySelectMenu()) {
             const messageToEdit = await interaction.channel.messages.fetch(interaction.message.id).catch(console.error);
